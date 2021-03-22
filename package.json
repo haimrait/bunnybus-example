@@ -26,7 +26,7 @@
         "@tenna-llc/ingestion-pipeline-shared": "^3.x",
         "@tenna-llc/superagent-wrapper": "^1.3.1",
         "config": "^3.x",
-        "epsagon-frameworks": "1.28.1",
+        "epsagon-frameworks": "1.28.3",
         "hapi-pino": "^8.x",
         "hapi-swagger": "^13.x",
         "ioredis": "^4.x",
