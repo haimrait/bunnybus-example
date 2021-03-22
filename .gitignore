@@ -1,0 +1,23 @@
+# Visual Code
+.vscode
+
+# Yeoman Repo
+.yo-repository
+
+# Serverless
+.serverless
+
+# Lalalambda
+_lalalambda
+
+# Node / NPM
+node_modules
+*.log
+
+# tests
+coverage/
+.nyc_output/
+coverage.html
+
+# package files
+*.tgz

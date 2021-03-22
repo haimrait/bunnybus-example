@@ -1,0 +1,12 @@
+test/
+docker/
+_lalalambda/
+.serverless/
+coverage/
+coverage.html
+
+# hidden files folders
+.*
+.*/
+
+*.tgz

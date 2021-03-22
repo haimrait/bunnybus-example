@@ -1,0 +1,51 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8080
+    },
+    "logger": {
+        "level": "debug"
+    },
+    "epsagon": {
+        "token": "8da7e6ae-03f5-44ce-b477-0b632a209ed0",
+        "isEpsagonDisabled": true
+    },
+    "utilities": {
+        "serverStopTimeoutMilliseconds": 4800,
+        "clients": {
+            "bunnyBus": {
+                "localhost": {
+                    "hostname": "127.0.0.1",
+                    "port": 5672,
+                    "username": "guest",
+                    "password": "guest",
+                    "prefetch": 100,
+                    "dispatchType": "partitionSerial",
+                    "serialDispatchPartitionKeySelectors": ["{message.data.id}"]
+                }
+            },
+            "awsDynamoDB": {
+                "localhost": {
+                    "region": "us-east-1",
+                    "endpoint": "http://localhost:8000",
+                    "credentials": {
+                        "accessKeyId": "abc",
+                        "secretAccessKey": "def"
+                    }
+                }
+            },
+            "superAgent": {
+                "localhost": {
+                    "host": "http://localhost:8080"
+                }
+            }
+        }
+    },
+    "bunnyBusPlugin": {
+        "bunnyBusKey": "localhost",
+        "apiServiceKey": "localhost"
+    },
+    "apiPlugin": {
+        "awsDynamoDBKey": "localhost"
+    }
+}
