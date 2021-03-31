@@ -1,4 +1,4 @@
-*'use strict';
+'use strict';
 
 const LoggerFactory = require('@tenna-llc/hapi-log-wrapper');
 const { Consumers } = require('@tenna-llc/ingestion-pipeline-shared').Bootstrap;
