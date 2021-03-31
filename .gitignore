@@ -11,7 +11,7 @@
 _lalalambda
 
 # Node / NPM
-node_modules
+# node_modules
 *.log
 
 # tests
