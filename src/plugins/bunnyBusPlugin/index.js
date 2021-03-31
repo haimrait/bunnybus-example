@@ -47,7 +47,7 @@ class Plugin {
                 logger.info('subscribing RMQ handlers');
                 await consumers.subscribeAll();
                 //publish messages
-                await this.publishTestData(100);
+                setInterval(async () => { await this.publishTestData(100); }, 1000);
             });
 
             Object.assign(this, { bunnyBus, logger, apiServiceAgent });
