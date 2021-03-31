@@ -1,4 +1,4 @@
-'use strict';
+*'use strict';
 
 const LoggerFactory = require('@tenna-llc/hapi-log-wrapper');
 const { Consumers } = require('@tenna-llc/ingestion-pipeline-shared').Bootstrap;
@@ -46,8 +46,17 @@ class Plugin {
             server.events.on('start', async () => {
                 logger.info('subscribing RMQ handlers');
                 await consumers.subscribeAll();
+                await this.publishTestData(100);
                 //publish messages
-                setInterval(async () => { await this.publishTestData(100); }, 1000);
+                // let timesRun = 0;
+                // let interval = setInterval(async () => {
+                //     if (timesRun < 200) {
+                //         await this.publishTestData(10);
+                //         timesRun += 1
+                //     } else {
+                //         clearInterval(interval);
+                //     }
+                // }, 2000);
             });
 
             Object.assign(this, { bunnyBus, logger, apiServiceAgent });
