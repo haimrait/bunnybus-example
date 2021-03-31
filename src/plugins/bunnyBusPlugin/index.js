@@ -35,7 +35,7 @@ class Plugin {
                         const { id } = data;
 
                         await this.apiServiceAgent.post(`/test/${id}`).send(data);
-
+                        // await ack();
                         const data1 = await this.apiServiceAgent.get(`/test/${id}`);
 
                         if (data1.id === id) await ack();
