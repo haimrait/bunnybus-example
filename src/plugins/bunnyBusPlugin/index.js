@@ -46,7 +46,7 @@ class Plugin {
             server.events.on('start', async () => {
                 logger.info('subscribing RMQ handlers');
                 await consumers.subscribeAll();
-                await this.publishTestData(100);
+                await this.publishTestData(10);
                 //publish messages
                 // let timesRun = 0;
                 // let interval = setInterval(async () => {
